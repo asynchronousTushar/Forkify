@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "forkify project",
   "main": "index.js",
+  "homepage": "https://asynchronoustushar.github.io/forkify",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack serve --mode development --open"
+    "start": "webpack serve --mode development --open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Tushar Biswas",
   "license": "ISC",
@@ -14,6 +17,7 @@
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
     "babel-loader": "^8.2.2",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.3.2",
     "webpack": "^5.44.0",
     "webpack-cli": "^4.7.2",
